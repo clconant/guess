@@ -1,19 +1,32 @@
+// generate random number between 0 and 1, multiply by 1, convert to integer with round up
+var Answer = Math.round(Math.random()*100);
+// Initialize turns variable, set to 0
 var Answer = Math.round(Math.random()*100);
 var Turns=0;
+// Initialize boolean variable correct, set to value false
 var Correct=false;
 Turns++;
 while (Correct==false) {
     var Guess = prompt("Guess my integer (between 0 and 100)!");
+    // initialize guess, set value to user input, telling user what to input
     if (Guess == Answer) {
+    // check if guess is equal to answer
         alert("CORRECT! You guessed it in "+Turns+" turns.");
+        // if equal, say "correct" and number of turns
         Correct = true;
     }
+    // check if guess greater than answer
     else if (Guess > Answer) {
+    // give feedback: go lower
         alert("Hint: Try a lower number!");
     }
     else if (Guess < Answer) {
+    // give feedback: go higher
         alert("Hint: Try a higher number!");
     }
+    // add one to turns
     Turns++;
 }
+//tell player the game is over
 alert("Thank you for playing.");
+if (Guess == turns < 8) alert("Try harder");
